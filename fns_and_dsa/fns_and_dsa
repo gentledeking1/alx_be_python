@@ -1,0 +1,30 @@
+def perform_operation(num1, num2, operation):
+
+
+     match operation:
+
+
+       case 'add':
+          retun num1 + num2
+
+
+       case 'subtract':
+          return num1 - num2
+
+
+       case 'multiply':
+          return num1 * num2
+
+
+       case 'divide':
+
+          if num2 == 0:
+            print("you cannot divide by zero.")
+            return Null
+
+          elif num2 != 0:
+            return num1 / num2
+      
+       case _:
+         print('invalid operation')
+         return Null
