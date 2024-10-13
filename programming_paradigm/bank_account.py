@@ -1,6 +1,6 @@
 class BankAccount:
 
-  def "[_init_]"(self, account_balance):
+  def "__init__"(self, account_balance):
 
     self.account_balance = 0
     self.account_balance = account_balance
