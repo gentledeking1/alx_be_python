@@ -1,17 +1,24 @@
-from book_class import Book
+from library_management import Book, Library
 
 def main():
-    # Creating an instance of Book
-    my_book = Book("1984", "George Orwell", 1949)
+    # Setup a small library
+    library = Library()
+    library.add_book(Book("Brave New World", "Aldous Huxley"))
+    library.add_book(Book("1984", "George Orwell"))
 
-    # Demonstrating the __str__ method
-    print(my_book)  # Expected to use __str__
+    # Initial list of available books
+    print("Available books after setup:")
+    library.list_available_books()
 
-    # Demonstrating the __repr__ method
-    print(repr(my_book))  # Expected to use __repr__
+    # Simulate checking out a book
+    library.check_out_book("1984")
+    print("\nAvailable books after checking out '1984':")
+    library.list_available_books()
 
-    # Deleting a book instance to trigger __del__
-    del my_book
+    # Simulate returning a book
+    library.return_book("1984")
+    print("\nAvailable books after returning '1984':")
+    library.list_available_books()
 
 if __name__ == "__main__":
     main()
